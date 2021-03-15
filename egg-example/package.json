@@ -1,0 +1,26 @@
+{
+  "name": "egg-example",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "egg-bin test",
+    "dev": "egg-bin dev",
+    "cov": "egg-bin cov"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "egg": "^2.29.3",
+    "egg-mysql": "^3.0.0",
+    "egg-passport": "^2.1.1",
+    "egg-passport-github": "^1.0.0",
+    "egg-validate": "^2.0.2",
+    "egg-view-nunjucks": "^2.3.0",
+    "moment": "^2.29.1"
+  },
+  "devDependencies": {
+    "egg-bin": "^4.15.0",
+    "egg-mock": "^4.0.1"
+  }
+}

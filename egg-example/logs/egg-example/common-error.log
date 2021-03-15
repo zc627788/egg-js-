@@ -1,0 +1,64 @@
+2021-03-15 15:28:03,089 ERROR 5144 [-/127.0.0.1/-/1ms GET /] nodejs.TypeError: Cannot read property 'insert' of undefined
+    at HomeController.index (D:\egg-example\app\controller\home.js:23:38)
+    at Object.callFn (D:\egg-example\node_modules\egg-core\lib\utils\index.js:44:21)
+    at Object.classControllerMiddleware (D:\egg-example\node_modules\egg-core\lib\loader\mixin\controller.js:87:20)
+    at Object.callFn (D:\egg-example\node_modules\@eggjs\router\lib\utils.js:12:21)
+    at wrappedController (D:\egg-example\node_modules\@eggjs\router\lib\egg_router.js:322:18)
+    at dispatch (D:\egg-example\node_modules\koa-compose\index.js:44:32)
+    at next (D:\egg-example\node_modules\koa-compose\index.js:45:18)
+    at D:\egg-example\node_modules\@eggjs\router\lib\router.js:190:18
+    at dispatch (D:\egg-example\node_modules\koa-compose\index.js:44:32)
+    at D:\egg-example\node_modules\koa-compose\index.js:36:12
+    at dispatch (D:\egg-example\node_modules\@eggjs\router\lib\router.js:195:33)
+    at dispatch (D:\egg-example\node_modules\koa\node_modules\koa-compose\index.js:42:32)
+    at errorHandler (D:\egg-example\app\middleware\error_handler.js:5:15)
+    at dispatch (D:\egg-example\node_modules\koa\node_modules\koa-compose\index.js:42:32)
+    at i18n (D:\egg-example\node_modules\egg-i18n\app\middleware\i18n.js:13:12)
+    at dispatch (D:\egg-example\node_modules\koa\node_modules\koa-compose\index.js:42:32)
+    at dispatch (D:\egg-example\node_modules\egg-security\node_modules\koa-compose\index.js:42:32)
+    at dta (D:\egg-example\node_modules\egg-security\lib\middlewares\dta.js:12:12)
+    at dispatch (D:\egg-example\node_modules\egg-security\node_modules\koa-compose\index.js:42:32)
+    at xframe (D:\egg-example\node_modules\egg-security\lib\middlewares\xframe.js:7:11)
+    at dispatch (D:\egg-example\node_modules\egg-security\node_modules\koa-compose\index.js:42:32)
+    at xssProtection (D:\egg-example\node_modules\egg-security\lib\middlewares\xssProtection.js:7:11)
+    at dispatch (D:\egg-example\node_modules\egg-security\node_modules\koa-compose\index.js:42:32)
+    at nosniff (D:\egg-example\node_modules\egg-security\lib\middlewares\nosniff.js:8:11)
+    at dispatch (D:\egg-example\node_modules\egg-security\node_modules\koa-compose\index.js:42:32)
+    at noopen (D:\egg-example\node_modules\egg-security\lib\middlewares\noopen.js:8:11)
+    at dispatch (D:\egg-example\node_modules\egg-security\node_modules\koa-compose\index.js:42:32)
+    at notAllow (D:\egg-example\node_modules\egg-security\lib\middlewares\methodnoallow.js:21:12)
+    at dispatch (D:\egg-example\node_modules\egg-security\node_modules\koa-compose\index.js:42:32)
+    at csrf (D:\egg-example\node_modules\egg-security\lib\middlewares\csrf.js:24:14)
+    at dispatch (D:\egg-example\node_modules\egg-security\node_modules\koa-compose\index.js:42:32)
+    at D:\egg-example\node_modules\egg-security\node_modules\koa-compose\index.js:34:12
+    at dispatch (D:\egg-example\node_modules\koa\node_modules\koa-compose\index.js:42:32)
+    at clusterAppMock (D:\egg-example\node_modules\egg-mock\app\middleware\cluster_app_mock.js:9:58)
+    at dispatch (D:\egg-example\node_modules\koa\node_modules\koa-compose\index.js:42:32)
+    at session (D:\egg-example\node_modules\koa-session\index.js:41:13)
+    at dispatch (D:\egg-example\node_modules\koa\node_modules\koa-compose\index.js:42:32)
+    at overrideMethod (D:\egg-example\node_modules\koa-override\index.js:13:70)
+    at dispatch (D:\egg-example\node_modules\koa\node_modules\koa-compose\index.js:42:32)
+    at bodyParser (D:\egg-example\node_modules\koa-bodyparser\index.js:95:11)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+    at D:\egg-example\node_modules\koa-static-cache\index.js:41:56
+    at notfound (D:\egg-example\node_modules\egg\app\middleware\notfound.js:5:5)
+    at meta (D:\egg-example\node_modules\egg\app\middleware\meta.js:17:5)
+
+pid: 5144
+hostname: DESKTOP-Q8OD458
+
+2021-03-15 15:45:07,242 ERROR 8656 [-/::1/-/3ms GET /news] nodejs.TypeError: Cannot destructure property 'serveUrl' of 'this.config.news' as it is undefined.
+    at NewService.list (D:\egg-example\app\service\news.js:4:17)
+    at NewsController.list (D:\egg-example\app\controller\news.js:16:49)
+    at Object.callFn (D:\egg-example\node_modules\egg-core\lib\utils\index.js:44:21)
+    at Object.classControllerMiddleware (D:\egg-example\node_modules\egg-core\lib\loader\mixin\controller.js:87:20)
+    at Object.callFn (D:\egg-example\node_modules\@eggjs\router\lib\utils.js:12:21)
+    at wrappedController (D:\egg-example\node_modules\@eggjs\router\lib\egg_router.js:322:18)
+    at dispatch (D:\egg-example\node_modules\koa-compose\index.js:44:32)
+    at next (D:\egg-example\node_modules\koa-compose\index.js:45:18)
+    at D:\egg-example\node_modules\@eggjs\router\lib\router.js:190:18
+    at dispatch (D:\egg-example\node_modules\koa-compose\index.js:44:32)
+
+pid: 8656
+hostname: DESKTOP-Q8OD458
+
