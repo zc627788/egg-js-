@@ -1,0 +1,42 @@
+name: Random Updates
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 */6 * * *'
+
+jobs:
+  update-repo:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Setup Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.x'
+      
+      - name: Generate random delay
+        id: random-delay
+        run: echo "::set-output name=delay::$(($RANDOM % 60))"
+      
+      - name: Sleep for a random duration
+        run: sleep ${{ steps.random-delay.outputs.delay }}
+      
+      - name: Execute Random Update Script
+        env:
+          MAX_COMMITS: 5
+          MIN_COMMITS: 2
+        run: python .github/scripts/random_update.py
+          
+      - name: Push changes
+        run: |
+          if [ -n "$(git status --porcelain)" ]; then
+            git config --local user.email "155208792@qq.com"
+            git config --local user.name "jackson zhang"
+            git commit -am "Random update"
+            git push
+          else
+            echo "No changes to commit"
+          fi
